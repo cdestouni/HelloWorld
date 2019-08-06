@@ -1,6 +1,7 @@
 #Dont track the contents of these subfolders
-target/
-.settings/
+/target/
+/.settings
 
 #Dont track the contents of the below files
-*.project
+/*.project
+/*.classpath
