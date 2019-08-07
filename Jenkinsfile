@@ -1,11 +1,12 @@
-#!groovy​
+#!groovy
 pipeline {
 	agent any
 	stages {
 		stage ('Download') {
 			steps {
 				echo "Running Download phase..."
-				sh 'git clone https://github.com/cdestouni/HelloWorld.git'
+				deleteDir()
+				git url: 'https://github.com/cdestouni/HelloWorld.git'
 			}
 		}
 		stage ('Build') {
